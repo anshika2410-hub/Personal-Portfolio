@@ -83,8 +83,8 @@ The portfolio will be deployed on Vercel soon.
 **Anshika Agrawal**
 
 * GitHub: https://github.com/anshika2410-hub
-* LinkedIn: *Add your LinkedIn profile URL here*
-* Email: *Add your professional email address here*
+* LinkedIn: https://www.linkedin.com/in/contact-anshikaagrawal/
+* Email: anshikaagrawal2410@gmail.com
 
 ## 🤝 Contributing
 
