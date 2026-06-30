@@ -8,7 +8,7 @@ export default function App() {
   const [copied, setCopied] = useState(false);
   const copyEmail = async () => {
   try {
-    await navigator.clipboard.writeText("yourmail@gmail.com");
+    await navigator.clipboard.writeText("anshikaagrawal2410@gmail.com");
 
     setCopied(true);
 
