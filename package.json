@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+<<<<<<< HEAD
   "homepage": "https://anshika2410-hub.github.io/Personal_Portfolio",
  "scripts": {
   "dev": "vite",
@@ -12,6 +13,16 @@
   "lint": "oxlint",
   "preview": "vite preview"
 },
+=======
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+>>>>>>> bdbf116 (updated App.jsx)
   "dependencies": {
     "framer-motion": "^12.42.0",
     "react": "^19.2.7",
