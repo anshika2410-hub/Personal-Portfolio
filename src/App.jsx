@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -49,32 +50,37 @@ export default function App() {
       {/* NAVBAR */}
       <nav className="navbar">
 
-        <div className="profile">
-          <div className="avatar" onClick={() => setMenuOpen(!menuOpen)}>
-            👩‍💻
-          </div>
+  <div className="profile">
+    <div className="avatar" onClick={() => setMenuOpen(!menuOpen)}>
+      👩‍💻
+    </div>
 
-          <h2 className="logo">Anshika Agrawal</h2>
-          <div style={{ display: "flex", gap: "10px" }}>
+    <h2 className="logo">Anshika Agrawal</h2>
+
+    {menuOpen && (
+      <div className="dropdown">
+        <p onClick={() => scrollToSection("about")}>About Me</p>
+        <p onClick={() => scrollToSection("skills")}>Skills</p>
+        <p onClick={() => scrollToSection("projects")}>Projects</p>
+        <p onClick={() => scrollToSection("certifications")}>Certifications</p>
+      </div>
+    )}
+  </div>
+
+  <div className="nav-actions">
     <a href="Resume.pdf" download className="resume-btn">
       📄 Resume
     </a>
+
+    <button
+      onClick={() => setDark(!dark)}
+      className="theme-btn"
+    >
+      {dark ? <FiSun size={20}/> : <FiMoon size={20}/>}
+    </button>
   </div>
 
-          {menuOpen && (
-            <div className="dropdown">
-              <p onClick={() => scrollToSection("about")}>About Me</p>
-              <p onClick={() => scrollToSection("skills")}>Skills</p>
-              <p onClick={() => scrollToSection("projects")}>Projects</p>
-              <p onClick={() => scrollToSection("certifications")}>Certifications</p>
-            </div>
-          )}
-        </div>
-
-        <button onClick={() => setDark(!dark)} className="btn">
-          {dark ? "☀️ Light" : "🌙 Dark"}
-        </button>
-      </nav>
+</nav>
 
       {/* HERO */}
       <header className="hero">
